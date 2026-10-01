@@ -1,4 +1,6 @@
 node_modules/
+# Upstream illustration screenshots are not part of this clean code export.
+assets/
 .dsh/
 .env
 .env.*
