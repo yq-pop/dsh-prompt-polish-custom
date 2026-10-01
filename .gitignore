@@ -1,0 +1,9 @@
+node_modules/
+.dsh/
+.env
+.env.*
+*.tgz
+.DS_Store
+._*
+.runtime-contracts/
+*smoke-results*.json
