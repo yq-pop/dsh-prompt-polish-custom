@@ -1,7 +1,7 @@
 # dsh-prompt-polish-custom
 
 针对 **DeepSeek Harness 0.2.0-rc.2** 的提示词优化定制版本。
-本仓库导出当前实际安装的 `dsh-prompt-polish@0.3.2-local.dsh020rc2.6`，不是仅修改兼容版本声明的原版。
+本仓库导出当前实际安装的 `dsh-prompt-polish@0.3.2-local.dsh020rc2.7`，不是仅修改兼容版本声明的原版。
 
 ## 功能
 
@@ -27,7 +27,10 @@ pnpm run build
 pnpm test
 ```
 
-Node 使用 DSH 所支持的现代版本（推荐 Node 24），pnpm 请使用环境中可用的版本。`.npmrc` 禁止自动安装运行时 peer 和第三方安装脚本；运行时由 DSH 提供。测试仅需要本项目的 zod 依赖。
+Node 使用 DSH 所支持的现代版本（推荐 Node 24），pnpm 请使用环境中可用的版本。`.npmrc` 禁止自动安装运行时 peer 和第三方安装脚本；运行时由 DSH 提供。运行时依赖为 zod；生命周期回归另需开发依赖 @deepseek-ai/cordis@4.0.4，已纳入锁文件。
+
+### local.7 稳定性修复
+Host 明确等待 timer、llm 和 agentDefaultModel 再挂载，避免启动顺序造成模型列表为空和永久“没有可用的模型服务”；文件、附件等可选服务在每次调用时读取。设置面板与弹窗使用插件局部纯色背景，跟随 DSH 实际亮暗主题，不依赖可能带透明度的层级背景 token。新增真实 Cordis 生命周期回归，并验证干净克隆可安装和运行全部测试。
 
 ## 代码结构
 

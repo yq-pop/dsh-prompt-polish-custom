@@ -1,6 +1,6 @@
 {
   "name": "dsh-prompt-polish",
-  "version": "0.3.2-local.dsh020rc2.6",
+  "version": "0.3.2-local.dsh020rc2.7",
   "description": "DeepSeek Harness 输入栏提示词优化插件：6 种策略 × 3 种语言与自定义指令重写草稿，可选携带聊天上下文（含压缩摘要）、目标与任务清单，结果确认弹窗、最近 5 次历史与三级设置持久化。Input-bar prompt optimizer for DeepSeek Harness: rewrites drafts with 6 strategies × 3 languages plus custom instructions, optional chat context (with compaction summary), goal and todo injection, a confirm dialog, last-5 history and three-tier settings persistence.",
   "type": "module",
   "main": "lib/index.js",
@@ -32,6 +32,7 @@
     "cordis.patch.yml",
     "README.md",
     "DEPLOYMENT.md",
+    "CHANGELOG.md",
     "LICENSE",
     "NOTICE"
   ],
@@ -56,6 +57,9 @@
   },
   "dependencies": {
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
